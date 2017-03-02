@@ -1,0 +1,32 @@
+<div ng-controller='userController as UC'>
+{{UC}}
+<h1>Register</h1>
+	<form>
+		First Name :<input type="text" ng-model="UC.users.firstname" ng-minlength="2" ng-maxlength="256" required>> <br />
+		Last Name :<input type="text" ng-model = "UC.users.lastname" ng-minlength="2" ng-maxlength="256" required> <br />
+		email :<input type="text" ng-model = "UC.users.email"> <br />
+		password:<input type="text" ng-model = "UC.users.password"> <br />
+		<button ng-click="UC.register()">Register</button>
+	</form>
+</div>
+<div ng-messages="regForm.first_name.$error" style="color:maroon" role="alert" ng-if='regForm.first_name.$touched'>
+      <div ng-message="required">You did not enter a First Name</div>
+      <div ng-message="minlength">Your First Name is too short</div>
+      <div ng-message="maxlength">Your First Name is too long</div>
+  </div>
+  <div ng-messages="regForm.last_name.$error" style="color:maroon" role="alert" ng-if='regForm.last_name.$touched'>
+      <div ng-message="required">You did not enter a Last Name</div>
+      <div ng-message="minlength">Your Last Name is too short</div>
+      <div ng-message="maxlength">Your Last Name is too long</div>
+  </div>
+  <div ng-messages="regForm.email.$error" style="color:maroon" role="alert" ng-if='regForm.email.$touched'>
+      <div ng-message="required">You did not enter a Email</div>
+      <div ng-message="minlength">Your Email is too short</div>
+      <div ng-message="maxlength">Your Email is too long</div>
+  </div>
+  <div ng-messages="regForm.password.$error" style="color:maroon" role="alert" ng-if='regForm.password.$touched'>
+      <div ng-message="required">You did not enter a Password</div>
+      <div ng-message="minlength">Your Password is too short</div>
+      <div ng-message="maxlength">Your Password is too long</div>
+  </div>
+</div>

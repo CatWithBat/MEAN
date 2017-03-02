@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Tom's Haus</title>
+	<script src ="bower_components/angular/angular.js"></script>
+	<script src ="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript">
+		console.log(angular)
+		var myApp = angular.module('myApp', ['ngRoute']);
+
+		myApp.config(function($routeProvider){
+			$routeProvider
+			.when('/', {
+				templateUrl: 'partials/beer.html'
+			})
+			.when('/beer', {
+				templateUrl: 'partials/beer.html'
+			})
+			.when('/food',{
+				templateUrl: 'partials/food.html'
+			})
+			.when('/pie', {
+				templateUrl: 'partials/pie.html'
+			})
+			.otherwise({
+				redirectTo: '/'
+			});
+		});
+
+
+
+
+	
+
+	</script>
+	<style>
+	
+</style>
+</head>
+<body>
+	<h1>Welcome to Tom's Haus of Beer, Sausage, Pie</h1>
+	<h2><a href="#/beer"> Beer  </a>|<a href="#/food">Sausage</a>|<a href="#/pie">Pie</a></h2>
+	<div ng-view="">
+	</div>
+	</body>
+</html>

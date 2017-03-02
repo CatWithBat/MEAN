@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>JSFun3</title>
+		<script>
+		var Person = function(name){
+			this.name = name
+		}
+		distance_traveled: function(){
+			print(${Person.name} +'has traveled' + +'miles')
+		}
+		say_name: function(){
+			print('my name is' + ${Person.name})
+		}
+		say_something: function(phrase){
+			print(${Person.name} +'says' + ${phrase})
+		}
+		walk: function(){
+			alert(${Person.name} +'is walking')
+		}
+		run: function(){
+			alert(${Person.name} + 'is running')
+		}
+		crawl: function(){
+			alert(${Person.name} + 'is crawling')
+		}
+
+
+		var ninjaconstructor = function(name, cohort){
+			this.name = name
+			this.cohort = cohort
+			this.belt = 'yellow'	
+		}
+
+		level_up: function(lang){
+			${ninjaconstructor.belt} = ('Black Belt in'+lang);
+			print ${ninjaconstructor.name}, ${ninjaconstructor.belt}
+
+		}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

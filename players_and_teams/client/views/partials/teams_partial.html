@@ -1,0 +1,20 @@
+<div ng-controller="teamController">
+<h1>Teams</h1>
+	<form>
+		<input type="text" ng-model="teamName">
+		<button ng-click="addTeam()">Add Team</button>
+	</form>
+
+	<table>
+		<thead>
+			<th>Team</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="team in allT>eams">
+				<td>{{team}}</td>
+				<td><button ng-click="deleteTeam()">Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
